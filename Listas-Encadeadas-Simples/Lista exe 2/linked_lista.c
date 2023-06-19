@@ -28,5 +28,9 @@ void Linkedlist_add_first(Linkedlist *L, int val){
   if(L->primeiro == NULL){
     SNo *p = SNo_create(val);
     L->primeiro = p;
+  } else {
+    SNo *p = SNo_create(val);
+    p->proximo = L->primeiro;
+    L->primeiro = p;
   }
 }
