@@ -46,6 +46,8 @@ void invertelista (lista *l){;}
 void exibeelementolista (lista *l, int elemento){;}
 
 void exibeestruturalista (lista *l){
+  // Segunda forma
+  noLista *noAtual = l->proximo;
   printf("&LISTA: %x  &1No': %x\n", &l, l->proximo);
   if(!listavazia (l)){
     printf("\n&No Elemento &proximo\n");
@@ -54,4 +56,13 @@ void exibeestruturalista (lista *l){
       printf("%x  %d  %x\n", &(*l) ,l->elemento, l->proximo);
     } while (l->proximo != NULL);
   }
+  // Primeira forma de fazer 
+  // printf("&LISTA: %x  &1No': %x\n", &l, l->proximo);
+  // if(!listavazia (l)){
+  //   printf("\n&No Elemento &proximo\n");
+  //   do {
+  //     l = l->proximo;
+  //     printf("%x  %d  %x\n", &(*l) ,l->elemento, l->proximo);
+  //   } while (l->proximo != NULL);
+  // }
 }

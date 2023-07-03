@@ -1,4 +1,4 @@
-typedef struct _lista{
+typedef struct{
    int elemento;
    struct noLista *proximo;
 } lista, noLista;
